@@ -1,3 +1,15 @@
 *This is the first day I use github to record my own progress. 
 *I-will keep adding my progress
 *Aiming to keep a record of my own progress unless i forgot it in future
+
+-What is Inversion of Control?
+*Since control means someone/something need/use something/somebody. An example is A need use B. 
+*Inversion of control create a mediation between them.An example is A tell C A need help. C find B and return B as a help for A.
+*Without C, A has to call B directly. Therefore inversion of Control is AKA loose of control.
+
+-Why need it?
+*Because we want to reuse some code, share some code, also sending and receiveing data cleaning.
+
+-How does it work?
+*It is a coding style which separates objects and data layer. 
+What is the benefit
