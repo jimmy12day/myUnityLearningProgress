@@ -1,0 +1,11 @@
+Crtl+K: BookMark(To avoid distraction)
+CTOR: CodeSnippet to generate a constructor faster
+PROP: CodeSnippet to generate a property faster
+PROPFULL:CodeSnippet to generate a full propoerty faster
+cw: Console.WriteLine();
+try tap: try catach throw
+forr: for loop
+productivity power tool
+crtl+tap: swap to currently opened files
+shift+alt+enter: full screen
+crtl+m: minimize or maximize the function/namespace,easy to focus
