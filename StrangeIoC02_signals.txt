@@ -1,0 +1,48 @@
+<SIGNAL>
+==============================
+How does signal works?
+==============================
+:::PIPELINE:::
+-commandBinder.Bind<SignalName>().To<CommandName>();    //1-A,First thing first
+-commandBinder.Bind<SignalName>();      //1-B, Optional,you can bind without command but still be able to add listeners
+-Signal.dispatach(value);         //Fire in anywhere/command, to pass 'value' to listener/function 
+-Signal.addListener(functionName);    //This is a command show you how to addlistener to the signal
+
+:::QUESTIONS:::
+- When signal should fire a command?  // It should be fired whenever it is needed to send information to another class/object
+- When signal should add a listenrer?  //If you want to a object to recieve the signal and do something, inject the signal or instantiate one, then add a listener to do what you want.
+- Why bind signal to be singleton? // Singleton allows it to be injection anywhere? I can't answer this question really well. 
+- Sometimes a sinal is bind to a command, sometime is bind to injection, why?(So a command can fire(dispatch) it and a mediator can receive it(addListener))
+
+:::(C)Command VS (L)listeners::::
+- Both(C)(L)are allowed to pass multiple parameters
+- (C) allows injection of view and signal, (L) don't 
+- (C) write more codes thant (L)
+- (C) binds to signal (L) not bind to signal
+- (C) is to fire an signal (L) listerner is how to receive the signal and do something
+
+:::QUESTION::::
+-How to inject Interface as a Class? Why use it?
+
+
+%%%%%%%%%%%%%%%%%%%%%%   HERE IS AN EXAMPLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+// Define ->
+public class IwantFoodSingal :Signal<string, int>{}
+
+// Bind ->
+commandbinder.Bind<IwantFoodSignal>().To<IwantFoodCommand>(){}
+
+// Inject ->
+[Inject]public IwantFoodSignal signal{get;set;}
+
+// Target ->
+[Inject]public Person Jimmy{get;set;}
+
+// Fire ->
+signal.dispatch("apple", "2");
+
+// Receive ->
+signal.addListener(getNumberOfFood());
+
+// Call ->
+getNumberOfFood(string foodName, int quantity){Jimmy.foodName = foodName; Jimmy.Quantit=quantity}

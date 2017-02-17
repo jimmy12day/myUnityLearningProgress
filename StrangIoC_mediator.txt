@@ -1,0 +1,11 @@
+/// Example mediator
+
+/// =====================
+
+/// Make your Mediator as thin as possible. Its function is to mediate
+
+/// between view and app. Don't load it up with behavior that belongs in
+
+/// the View (listening to/controlling interface), Commands (business logic),
+
+/// Models (maintaining state) or Services (reaching out for data).
