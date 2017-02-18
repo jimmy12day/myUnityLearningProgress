@@ -1,0 +1,4 @@
+injectionBinder.Bind<IHittable>().Bind<IUpdateable>().To<Romulan>();  //Multiple binds Is allowed
+injectionBinder.Bind<IHittable>().To<Romulan>().To<LuckyBoy>;  //Multiple To is not allowed
+
+commandBinder.Bind<Signal>().To<CommandOne>().To<CommandThree>();//Multiple To is allowed in commands binding.

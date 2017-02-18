@@ -1,0 +1,28 @@
+Inject: View - Mediator
+Inject: View - Command
+Inject: Signal - Command
+Inject: Signal - Mediator
+Inject: Service - Command
+Inject: GameManager(Singleton) - Meditor
+Inject: GameManager(Singleton) - Command
+Inject: GameData(Singleton) - Mediator
+Inject: GameData(Singleton) - Command
+Inject: EventDispatcher - View (Not recommended)
+Inject: string-Command (Whenever the string is dispatched by a signal, need an injected signal in this command)
+Inject: int-Command (Same As Aboved)
+Inject: float-Command (Same As Aboved)
+Inject: A Class
+Inject: An inteface
+:
+:
+:
+
+Do Not Inject To:
+-View
+-Interface
+-GameManager
+-GameData
+-Model
+
+
+
